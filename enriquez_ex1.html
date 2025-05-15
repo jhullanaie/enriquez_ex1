@@ -4,6 +4,19 @@
         <meta charset="UTF-8">
         <title>Love and Deepspace</title>
         <link rel="stylesheet" href="styles.css">
+        <script>
+            let currentSlide = 0;
+
+            function moveSlide(direction) {
+                const slides = document.querySelectorAll('.carousel-item');
+                const totalSlides = slides.length;
+ 
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+   
+                const offset = -currentSlide * 100;
+                document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+            }
+        </script>
     </head>
     <body>
         <!-- Header with Navigation menu -->
@@ -24,7 +37,35 @@
         </header>
         <img src="Images/cover.png" alt="Cover" class="cover">
         <main>
-
+            <section id="characters" class="characters">
+                <h2 class="characters-header">Characters</h2>
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Images/x.png" alt="Xavier">
+                                <h4>Xavier</h4>
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="Images/z.png" alt="Zayne">
+                                <h4>Zayne</h4>
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="Images/r.png" alt="Rafayel">
+                                <h4>Rafayel</h4>
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="Images/s.png" alt="Sylus">
+                                <h4>Sylus</h4>
+                            </div>
+                            <div class="carousel-item active">
+                                <img src="Images/c.png" alt="Caleb">
+                                <h4>Caleb</h4>
+                            </div>
+                        </div>
+                        <button class="carousel-control left" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="carousel-control right" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+            </section>
         </main>
     </body>
     <!-- Footer section -->
