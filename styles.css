@@ -106,17 +106,7 @@ nav ul li a:hover {
     position: relative;
 }
 
-.carousel-item h4 {
-    position: absolute;
-    bottom: 4%;
-    left: 50%; 
-    font-family: Zapfino;
-    transform: translateX(-50%); 
-    color: white;
-    margin: 0;
-    font-size: 1.2em;
-    text-align: center;
-}
+
 
 .carousel-item img {
     width: 90%;
